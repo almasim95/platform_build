@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     TeleService \
     VpnDialogs \
     MmsService \
-    chromium
+    chromium \
+    Updater
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_base.mk)
