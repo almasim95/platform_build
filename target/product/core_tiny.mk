@@ -121,12 +121,12 @@ ifeq (eng,$(TARGET_BUILD_VARIANT))
 else
     PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         pm.dexopt.first-boot=interpret-only \
-        pm.dexopt.boot=verify-profile
+        pm.dexopt.boot=interpret-only
 endif
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     pm.dexopt.install=interpret-only \
-    pm.dexopt.bg-dexopt=speed-profile \
-    pm.dexopt.ab-ota=speed-profile \
+    pm.dexopt.bg-dexopt=speed \
+    pm.dexopt.ab-ota=speed \
     pm.dexopt.nsys-library=speed \
     pm.dexopt.shared-apk=speed \
     pm.dexopt.forced-dexopt=speed \
