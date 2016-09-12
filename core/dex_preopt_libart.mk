@@ -108,7 +108,6 @@ $(hide) ANDROID_LOG_TAGS="*:e" $(DEX2OAT) \
 	--instruction-set-variant=$($(PRIVATE_2ND_ARCH_VAR_PREFIX)DEX2OAT_TARGET_CPU_VARIANT) \
 	--instruction-set-features=$($(PRIVATE_2ND_ARCH_VAR_PREFIX)DEX2OAT_TARGET_INSTRUCTION_SET_FEATURES) \
 	--include-patch-information --runtime-arg -Xnorelocate --no-generate-debug-info \
-	--abort-on-hard-verifier-error \
 	--no-inline-from=core-oj.jar \
 	$(PRIVATE_DEX_PREOPT_FLAGS) \
 	$(GLOBAL_DEXPREOPT_FLAGS)
