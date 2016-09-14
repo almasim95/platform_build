@@ -148,7 +148,7 @@ BOUNDS_BLACKLIST := libicuuc libicuuc_static libicui18n libicui18n_static libope
 ifndef LOCAL_IS_HOST_MODULE
   ifeq ($(filter $(LOCAL_MODULE),$(BOUNDS_BLACKLIST)),)
     ifeq ($(my_clang),true)
-      my_cflags += -fsanitize=bounds -fsanitize-trap=bounds
+      my_conlyflags += -fsanitize=bounds -fsanitize-trap=bounds
     endif
   endif
 endif
