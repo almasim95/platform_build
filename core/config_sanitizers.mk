@@ -142,3 +142,9 @@ ifeq ($(filter undefined,$(my_sanitize)),)
     endif
   endif
 endif
+
+ifndef LOCAL_IS_HOST_MODULE
+  ifeq ($(my_clang),true)
+    my_cflags += -fsanitize=bounds -fsanitize-trap=bounds
+  endif
+endif
