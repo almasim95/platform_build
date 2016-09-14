@@ -134,3 +134,11 @@ ifneq ($(strip $(LOCAL_SANITIZE_RECOVER)),)
   recover_arg := $(subst $(space),$(comma),$(LOCAL_SANITIZE_RECOVER)),
   my_cflags += -fsanitize-recover=$(recover_arg)
 endif
+
+ifeq ($(filter undefined,$(my_sanitize)),)
+  ifeq ($(filter integer,$(my_sanitize)),)
+    ifeq ($(filter signed-integer-overflow,$(my_sanitize)),)
+      my_cflags += -fwrapv
+    endif
+  endif
+endif
