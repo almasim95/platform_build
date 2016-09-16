@@ -143,7 +143,7 @@ ifeq ($(filter undefined,$(my_sanitize)),)
   endif
 endif
 
-BOUNDS_BLACKLIST := libicuuc libicuuc_static libicui18n libicui18n_static
+BOUNDS_BLACKLIST := libicuuc libicuuc_static libicui18n libicui18n_static libopenjdk libopenjdkd
 
 ifndef LOCAL_IS_HOST_MODULE
   ifeq ($(filter $(LOCAL_MODULE),$(BOUNDS_BLACKLIST)),)
