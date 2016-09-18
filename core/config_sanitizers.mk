@@ -153,7 +153,8 @@ BOUNDS_BLACKLIST := libicuuc libicuuc_static libicui18n libicui18n_static \
                     libopenjdk libopenjdkd \
                     nfc_nci.bcm2079x.default \
                     libbt-bta \
-                    libart
+                    libart \
+                    patchoat
 
 ifndef LOCAL_IS_HOST_MODULE
   ifeq ($(filter $(LOCAL_MODULE),$(BOUNDS_BLACKLIST)),)
