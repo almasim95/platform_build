@@ -135,6 +135,12 @@ ifneq ($(strip $(LOCAL_SANITIZE_RECOVER)),)
   my_cflags += -fsanitize-recover=$(recover_arg)
 endif
 
+ifndef LOCAL_IS_HOST_MODULE
+  ifeq ($(my_clang),true)
+    my_cflags += -fsanitize=local-init
+  endif
+endif
+
 ifeq ($(filter undefined,$(my_sanitize)),)
   ifeq ($(filter integer,$(my_sanitize)),)
     ifeq ($(filter signed-integer-overflow,$(my_sanitize)),)
