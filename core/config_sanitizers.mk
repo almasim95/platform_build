@@ -158,7 +158,8 @@ BOUNDS_BLACKLIST := libicuuc libicuuc_static libicui18n libicui18n_static \
                     libOmxVdec \
                     libgui \
                     sensors.flounder \
-                    libjni_latinime_common_static
+                    libjni_latinime_common_static \
+                    libunwind
 
 ifndef LOCAL_IS_HOST_MODULE
   ifeq ($(filter $(LOCAL_MODULE),$(BOUNDS_BLACKLIST)),)
